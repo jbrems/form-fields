@@ -1,0 +1,4 @@
+<div class="inputField">
+  <label *ngIf="label" [for]="fieldId" [ngClass]="{ top: labelOnTop }">{{ label }}</label>
+  <input #inputField type="text" [id]="fieldId" (focus)="onFocus()" (blur)="onBlur()" (input)="onChange()">
+</div>

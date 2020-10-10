@@ -1,0 +1,71 @@
+@import '../../default-colors';
+
+:host {
+  &.ng-touched {
+    &.ng-invalid .inputField input {
+      border-color: $input-field-invalid-color;
+      background-color: lighten($input-field-invalid-color, 50%);
+
+      &:focus {
+        border-bottom: solid 2px $input-field-focus-color;
+      }
+    }
+
+    &.ng-valid .inputField input {
+      border-color: $input-field-valid-color;
+      background-color: lighten($input-field-valid-color, 50%);
+
+      &:focus {
+        border-bottom: solid 2px $input-field-focus-color;
+      }
+    }
+  }
+
+  .inputField {
+    position: relative;
+
+    input {
+      height: 16px;
+      width: calc(100% - 20px);
+
+      padding: 10px 10px;
+
+      font-family: Roboto, Helvetica, Arial, sans-serif;
+      font-size: 16px;
+
+      border: solid 1px $black-lighter;
+      border-radius: 3px;
+
+      transition: border-color 1s, background-color 1s;
+
+      &:focus {
+        outline: none;
+        height: 15px;
+        border-bottom: solid 2px $input-field-focus-color;
+      }
+    }
+
+    label {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+
+      color: $black-light;
+
+      transition: top 0.5s, font-size 0.5s;
+
+      &.top {
+        top: -7px;
+        left: 10px;
+
+        padding: 0 5px;
+
+        font-size: 12px;
+
+        background: linear-gradient(transparent, transparent 48%, $white 49%, $white 62%, transparent 63%, transparent 100%);
+      }
+    }
+  }
+}
+
+
