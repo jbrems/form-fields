@@ -10,7 +10,9 @@ export function withAngularForm(storyFn: () => { template: string, props: object
     ...story,
     template: `
       <h1>With Angular Form</h1>
-      <form [formGroup]="form">${story.template}</form>
+      <form [formGroup]="form">
+        ${story.template}
+      </form>
     `,
     props: {
       form,
@@ -20,8 +22,9 @@ export function withAngularForm(storyFn: () => { template: string, props: object
 }
 
 function parseFormControlNames(template: string): string[] {
-  const formControlNameRegex = /formControlName\s?=\s?["']([^"\s]*)["']/gm;
   const formControlNames: string[] = [];
+
+  const formControlNameRegex = /formControlName\s?=\s?["']([^"\s]*)["']/gm;
   let match = null;
 
   do {

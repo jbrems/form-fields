@@ -1,0 +1,17 @@
+:host ::ng-deep {
+  @import '../../utils/material-theme';
+
+  .mat-form-field-infix {
+    border: solid 1px lightgrey;
+    border-radius: 3px;
+  }
+
+  input {
+    padding: 0 3px;
+  }
+
+  label {
+    margin-left: 3px;
+  }
+}
+

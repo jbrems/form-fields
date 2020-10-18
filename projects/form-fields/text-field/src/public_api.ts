@@ -1,1 +1,2 @@
-export const formField = 'just a string for now';
+export * from './text-field.module';
+export * from './text-field.component';
